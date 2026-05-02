@@ -1,5 +1,7 @@
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
-
-    document.getElementById("formMsg").innerText = "Message sent successfully!";
+    const msg = document.getElementById("formMsg");
+    msg.innerText = "Message sent successfully!";
+    msg.style.color = "#38bdf8";
+    this.reset();
 });
