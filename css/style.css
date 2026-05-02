@@ -1,56 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-    background: #0f172a;
-    color: white;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #020617;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
+/* Hero fix — text, subtitle, and button stacked vertically */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
+    padding: 80px 50px;
+    gap: 40px;
 }
 
-.hero img {
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+.hero-text .btn {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.hero-img img {
     width: 250px;
+    height: 250px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
 }
 
-.btn {
-    background: #38bdf8;
-    padding: 10px 20px;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
+/* About section */
+.about {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 16px;
+}
+
+.about p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Skills section */
+.skills {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .skills span {
     background: #1e293b;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.skills span:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #020617;
+    color: #64748b;
+    font-size: 0.85rem;
 }
