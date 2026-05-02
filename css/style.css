@@ -1,4 +1,64 @@
-/* Hero fix — text, subtitle, and button stacked vertically */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #020617;
+}
+
+.logo {
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Button */
+.btn {
+    background: #38bdf8;
+    padding: 10px 22px;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+    background: #7dd3fc;
+    transform: translateY(-1px);
+}
+
+/* Hero */
 .hero {
     display: flex;
     align-items: center;
@@ -37,7 +97,7 @@
     border: 3px solid #38bdf8;
 }
 
-/* About section */
+/* About */
 .about {
     max-width: 700px;
     margin: 60px auto;
@@ -57,7 +117,7 @@
     font-size: 1rem;
 }
 
-/* Skills section */
+/* Skills */
 .skills {
     max-width: 700px;
     margin: 0 auto 60px;
