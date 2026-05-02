@@ -1,0 +1,76 @@
+<style>
+  .contact {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 60px 40px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #38bdf8;
+    letter-spacing: -0.5px;
+  }
+
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+  }
+
+  #contactForm input::placeholder,
+  #contactForm textarea::placeholder {
+    color: #64748b;
+  }
+
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+  }
+
+  #contactForm textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  #contactForm button[type="submit"] {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s, transform 0.15s;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #contactForm button[type="submit"]:hover {
+    background: #7dd3fc;
+    transform: translateY(-1px);
+  }
+
+  #formMsg {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #38bdf8;
+  }
+</style>
