@@ -32,7 +32,9 @@ footer {
     z-index: 1;
 }
 
-/* Navbar */
+/* =====================
+   NAVBAR
+   ===================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -51,18 +53,39 @@ footer {
     gap: 20px;
 }
 
+/* Nav link with sliding underline effect */
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
     transition: color 0.2s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    border-radius: 2px;
+    transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
     color: #38bdf8;
 }
 
-/* Button */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =====================
+   BUTTON with Ripple
+   ===================== */
 .btn {
     background: #38bdf8;
     padding: 10px 22px;
@@ -72,15 +95,42 @@ footer {
     font-weight: 600;
     font-size: 0.9rem;
     display: inline-block;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
     transition: background 0.2s, transform 0.15s;
 }
 
 .btn:hover {
     background: #7dd3fc;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
-/* Hero */
+.btn:active {
+    transform: scale(0.96) translateY(0);
+}
+
+/* Ripple span injected by JS */
+.btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-anim 0.55s linear;
+    background: rgba(255, 255, 255, 0.45);
+    pointer-events: none;
+}
+
+@keyframes ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* =====================
+   HERO
+   ===================== */
 .hero {
     display: flex;
     align-items: center;
@@ -111,15 +161,25 @@ footer {
     margin-top: 8px;
 }
 
+/* Profile image with hover zoom */
 .hero-img img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #38bdf8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-/* About */
+.hero-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.45);
+}
+
+/* =====================
+   ABOUT
+   ===================== */
 .about {
     max-width: 700px;
     margin: 60px auto;
@@ -139,7 +199,9 @@ footer {
     font-size: 1rem;
 }
 
-/* Skills */
+/* =====================
+   SKILLS
+   ===================== */
 .skills {
     max-width: 700px;
     margin: 0 auto 60px;
@@ -160,14 +222,17 @@ footer {
     gap: 10px;
 }
 
+/* Skill tags — fixed color + press + selectable */
 .skills span {
     background: #1e293b;
     border: 1px solid #334155;
-    color: #17355d;
+    color: #94a3b8;          /* Fixed: was #17355d (invisible on dark bg) */
     padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.9rem;
-    transition: border-color 0.2s, color 0.2s;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.12s;
 }
 
 .skills span:hover {
@@ -175,11 +240,36 @@ footer {
     color: #38bdf8;
 }
 
-/* Footer */
+.skills span:active {
+    transform: scale(0.93);
+    background: #0f2231;
+}
+
+/* Selected state toggled by JS */
+.skills span.selected {
+    background: rgba(56, 189, 248, 0.12);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
 footer {
     text-align: center;
     padding: 24px;
     background: #020617;
     color: #64748b;
     font-size: 0.85rem;
+}
+
+/* Footer links (if any) */
+footer a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #38bdf8;
 }
