@@ -11,16 +11,16 @@ body {
     position: relative;
 }
 
-body::before {
+/* body::before {
     content: '';
     position: fixed;
     inset: 0;
     z-index: 0;
     opacity: 0.35;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3C!-- grid dots --%3E%3Cg fill='%231e3a5f'%3E%3Ccircle cx='10' cy='10' r='1.2'/%3E%3Ccircle cx='50' cy='10' r='1.2'/%3E%3Ccircle cx='90' cy='10' r='1.2'/%3E%3Ccircle cx='130' cy='10' r='1.2'/%3E%3Ccircle cx='170' cy='10' r='1.2'/%3E%3Ccircle cx='10' cy='50' r='1.2'/%3E%3Ccircle cx='50' cy='50' r='1.2'/%3E%3Ccircle cx='90' cy='50' r='1.2'/%3E%3Ccircle cx='130' cy='50' r='1.2'/%3E%3Ccircle cx='170' cy='50' r='1.2'/%3E%3Ccircle cx='10' cy='90' r='1.2'/%3E%3Ccircle cx='50' cy='90' r='1.2'/%3E%3Ccircle cx='90' cy='90' r='1.2'/%3E%3Ccircle cx='130' cy='90' r='1.2'/%3E%3Ccircle cx='170' cy='90' r='1.2'/%3E%3Ccircle cx='10' cy='130' r='1.2'/%3E%3Ccircle cx='50' cy='130' r='1.2'/%3E%3Ccircle cx='90' cy='130' r='1.2'/%3E%3Ccircle cx='130' cy='130' r='1.2'/%3E%3Ccircle cx='170' cy='130' r='1.2'/%3E%3Ccircle cx='10' cy='170' r='1.2'/%3E%3Ccircle cx='50' cy='170' r='1.2'/%3E%3Ccircle cx='90' cy='170' r='1.2'/%3E%3Ccircle cx='130' cy='170' r='1.2'/%3E%3Ccircle cx='170' cy='170' r='1.2'/%3E%3C/g%3E%3C!-- traces --%3E%3Cg stroke='%231a4a7a' stroke-width='1' fill='none'%3E%3Cline x1='10' y1='10' x2='90' y2='10'/%3E%3Cline x1='130' y1='10' x2='170' y2='10'/%3E%3Cline x1='10' y1='10' x2='10' y2='90'/%3E%3Cline x1='90' y1='10' x2='90' y2='50'/%3E%3Cline x1='50' y1='50' x2='170' y2='50'/%3E%3Cline x1='170' y1='10' x2='170' y2='50'/%3E%3Cline x1='10' y1='90' x2='50' y2='90'/%3E%3Cline x1='130' y1='90' x2='170' y2='90'/%3E%3Cline x1='50' y1='90' x2='50' y2='130'/%3E%3Cline x1='170' y1='90' x2='170' y2='170'/%3E%3Cline x1='10' y1='130' x2='50' y2='130'/%3E%3Cline x1='90' y1='130' x2='170' y2='130'/%3E%3Cline x1='90' y1='90' x2='90' y2='130'/%3E%3Cline x1='10' y1='170' x2='90' y2='170'/%3E%3Cline x1='130' y1='170' x2='170' y2='170'/%3E%3Cline x1='10' y1='130' x2='10' y2='170'/%3E%3C/g%3E%3C!-- L-bends --%3E%3Cg stroke='%231a4a7a' stroke-width='1' fill='none'%3E%3Cpolyline points='130,90 130,50 170,50'/%3E%3Cpolyline points='90,130 90,170 130,170'/%3E%3C/g%3E%3C!-- vias --%3E%3Cg fill='none' stroke='%232563a8' stroke-width='1'%3E%3Ccircle cx='10' cy='10' r='3.5'/%3E%3Ccircle cx='90' cy='10' r='3.5'/%3E%3Ccircle cx='170' cy='50' r='3.5'/%3E%3Ccircle cx='50' cy='90' r='3.5'/%3E%3Ccircle cx='130' cy='90' r='3.5'/%3E%3Ccircle cx='10' cy='170' r='3.5'/%3E%3Ccircle cx='170' cy='170' r='3.5'/%3E%3C/g%3E%3Cg fill='%232563a8'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='90' cy='10' r='1.5'/%3E%3Ccircle cx='170' cy='50' r='1.5'/%3E%3Ccircle cx='50' cy='90' r='1.5'/%3E%3Ccircle cx='130' cy='90' r='1.5'/%3E%3Ccircle cx='10' cy='170' r='1.5'/%3E%3Ccircle cx='170' cy='170' r='1.5'/%3E%3C/g%3E%3C!-- resistor --%3E%3Cg stroke='%231e5c9e' stroke-width='1' fill='none'%3E%3Cline x1='90' y1='130' x2='100' y2='130'/%3E%3Crect x='100' y='125' width='20' height='10' rx='2'/%3E%3Cline x1='120' y1='130' x2='130' y2='130'/%3E%3C/g%3E%3C!-- capacitor --%3E%3Cg stroke='%231e5c9e' stroke-width='1' fill='none'%3E%3Cline x1='50' y1='130' x2='50' y2='155'/%3E%3Cline x1='42' y1='155' x2='58' y2='155'/%3E%3Cline x1='42' y1='161' x2='58' y2='161'/%3E%3Cline x1='50' y1='161' x2='50' y2='170'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,...");
     background-size: 200px 200px;
     pointer-events: none;
-}
+} */
 
 /* All content must sit above the background */
 .navbar,
