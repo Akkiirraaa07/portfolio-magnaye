@@ -6,27 +6,17 @@
 }
 
 body {
-    background: #000000;  /* Pure black background */
-    color: #4a1d6d;       /* Dark purple text for readability */
+    background: #000000;
+    color: #4a1d6d;
     position: relative;
 }
-
-/* body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    opacity: 0.35;
-    background-image: url("data:image/svg+xml,...");
-    background-size: 200px 200px;
-    pointer-events: none;
-} */
 
 /* All content must sit above the background */
 .navbar,
 .hero,
 .about,
 .skills,
+.skills-technologies,
 footer {
     position: relative;
     z-index: 1;
@@ -40,11 +30,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: #0a0a0a;  /* Slightly lighter black for navbar */
+    background: #0a0a0a;
 }
 
 .logo {
-    color: #7b2eda;       /* Brighter purple for logo */
+    color: #7b2eda;
 }
 
 .nav-links {
@@ -55,7 +45,7 @@ footer {
 
 /* Nav link with sliding underline effect */
 .nav-links a {
-    color: #b77de8;       /* Lighter purple for nav links */
+    color: #b77de8;
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
@@ -70,13 +60,13 @@ footer {
     left: 0;
     width: 0;
     height: 2px;
-    background: #9b4dff;  /* Bright purple underline */
+    background: #9b4dff;
     border-radius: 2px;
     transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-    color: #c79aff;       /* Even lighter on hover */
+    color: #c79aff;
 }
 
 .nav-links a:hover::after {
@@ -87,9 +77,9 @@ footer {
    BUTTON with Ripple
    ===================== */
 .btn {
-    background: #7b2eda;   /* Purple background for buttons */
+    background: #7b2eda;
     padding: 10px 22px;
-    color: #ffffff;        /* White text for contrast */
+    color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
@@ -103,7 +93,7 @@ footer {
 }
 
 .btn:hover {
-    background: #9b4dff;   /* Lighter purple on hover */
+    background: #9b4dff;
     transform: translateY(-2px);
 }
 
@@ -149,12 +139,12 @@ footer {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #b77de8;       /* Purple heading */
+    color: #b77de8;
 }
 
 .hero-text p {
     font-size: 1.1rem;
-    color: #8c5fc7;       /* Medium purple for paragraph */
+    color: #8c5fc7;
 }
 
 .hero-text .btn {
@@ -168,14 +158,14 @@ footer {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #7b2eda;  /* Purple border */
+    border: 3px solid #7b2eda;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .hero-img img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 24px rgba(123, 46, 218, 0.45);  /* Purple glow */
+    box-shadow: 0 0 24px rgba(123, 46, 218, 0.45);
 }
 
 /* =====================
@@ -190,18 +180,18 @@ footer {
 
 .about h2 {
     font-size: 1.8rem;
-    color: #9b4dff;       /* Bright purple for section titles */
+    color: #9b4dff;
     margin-bottom: 16px;
 }
 
 .about p {
-    color: #bca3e6;       /* Light purple for readability */
+    color: #bca3e6;
     line-height: 1.8;
     font-size: 1rem;
 }
 
 /* =====================
-   SKILLS
+   SKILLS (Simple Tags)
    ===================== */
 .skills {
     max-width: 700px;
@@ -212,7 +202,7 @@ footer {
 
 .skills h2 {
     font-size: 1.8rem;
-    color: #9b4dff;       /* Bright purple */
+    color: #9b4dff;
     margin-bottom: 20px;
 }
 
@@ -225,9 +215,9 @@ footer {
 
 /* Skill tags */
 .skills span {
-    background: #1a0b2a;    /* Dark purple-black background */
+    background: #1a0b2a;
     border: 1px solid #4a1d6d;
-    color: #c79aff;         /* Light purple text */
+    color: #c79aff;
     padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -238,7 +228,7 @@ footer {
 
 .skills span:hover {
     border-color: #9b4dff;
-    color: #e8d5ff;        /* Very light purple on hover */
+    color: #e8d5ff;
 }
 
 .skills span:active {
@@ -248,9 +238,80 @@ footer {
 
 /* Selected state toggled by JS */
 .skills span.selected {
-    background: rgba(123, 46, 218, 0.2);  /* Purple tint */
+    background: rgba(123, 46, 218, 0.2);
     border-color: #9b4dff;
     color: #e8d5ff;
+}
+
+/* =====================
+   SKILLS & TECHNOLOGIES (Card Layout)
+   ===================== */
+.skills-technologies {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.skills-technologies h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Individual skill card */
+.skill-card {
+    background: #0f0f0f;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: #2a2a2a;
+    box-shadow: 0 8px 24px rgba(123, 46, 218, 0.15);
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    color: #888888;
+    margin-bottom: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tag container inside card */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Individual skill tag */
+.skill-tag {
+    background: transparent;
+    border: 1px solid #6b3fa0;
+    color: #b77de8;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: rgba(107, 63, 160, 0.15);
+    border-color: #8b5fc7;
+    color: #c79aff;
 }
 
 /* =====================
@@ -260,7 +321,7 @@ footer {
     text-align: center;
     padding: 24px;
     background: #0a0a0a;
-    color: #8c5fc7;       /* Medium purple */
+    color: #8c5fc7;
     font-size: 0.85rem;
 }
 
@@ -272,5 +333,5 @@ footer a {
 }
 
 footer a:hover {
-    color: #e8d5ff;       /* Very light purple on hover */
+    color: #e8d5ff;
 }

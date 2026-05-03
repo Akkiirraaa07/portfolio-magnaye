@@ -9,4 +9,46 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    /* Skills & Technologies responsive */
+    .skills-technologies {
+        padding: 0 20px;
+    }
+
+    .skills-technologies h2 {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about {
+        padding: 0 20px;
+    }
+
+    .skills {
+        padding: 0 20px;
+    }
 }
