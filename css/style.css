@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #0f172a;
-    color: white;
+    background: #000000;  /* Pure black background */
+    color: #4a1d6d;       /* Dark purple text for readability */
     position: relative;
 }
 
@@ -40,11 +40,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: #020617;
+    background: #0a0a0a;  /* Slightly lighter black for navbar */
 }
 
 .logo {
-    color: #38bdf8;
+    color: #7b2eda;       /* Brighter purple for logo */
 }
 
 .nav-links {
@@ -55,7 +55,7 @@ footer {
 
 /* Nav link with sliding underline effect */
 .nav-links a {
-    color: white;
+    color: #b77de8;       /* Lighter purple for nav links */
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
@@ -70,13 +70,13 @@ footer {
     left: 0;
     width: 0;
     height: 2px;
-    background: #38bdf8;
+    background: #9b4dff;  /* Bright purple underline */
     border-radius: 2px;
     transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-    color: #38bdf8;
+    color: #c79aff;       /* Even lighter on hover */
 }
 
 .nav-links a:hover::after {
@@ -87,9 +87,9 @@ footer {
    BUTTON with Ripple
    ===================== */
 .btn {
-    background: #38bdf8;
+    background: #7b2eda;   /* Purple background for buttons */
     padding: 10px 22px;
-    color: #0f172a;
+    color: #ffffff;        /* White text for contrast */
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
@@ -103,7 +103,7 @@ footer {
 }
 
 .btn:hover {
-    background: #7dd3fc;
+    background: #9b4dff;   /* Lighter purple on hover */
     transform: translateY(-2px);
 }
 
@@ -149,11 +149,12 @@ footer {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
+    color: #b77de8;       /* Purple heading */
 }
 
 .hero-text p {
     font-size: 1.1rem;
-    color: #94a3b8;
+    color: #8c5fc7;       /* Medium purple for paragraph */
 }
 
 .hero-text .btn {
@@ -167,14 +168,14 @@ footer {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #38bdf8;
+    border: 3px solid #7b2eda;  /* Purple border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .hero-img img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 24px rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 24px rgba(123, 46, 218, 0.45);  /* Purple glow */
 }
 
 /* =====================
@@ -189,12 +190,12 @@ footer {
 
 .about h2 {
     font-size: 1.8rem;
-    color: #38bdf8;
+    color: #9b4dff;       /* Bright purple for section titles */
     margin-bottom: 16px;
 }
 
 .about p {
-    color: #94a3b8;
+    color: #bca3e6;       /* Light purple for readability */
     line-height: 1.8;
     font-size: 1rem;
 }
@@ -211,7 +212,7 @@ footer {
 
 .skills h2 {
     font-size: 1.8rem;
-    color: #38bdf8;
+    color: #9b4dff;       /* Bright purple */
     margin-bottom: 20px;
 }
 
@@ -222,11 +223,11 @@ footer {
     gap: 10px;
 }
 
-/* Skill tags — fixed color + press + selectable */
+/* Skill tags */
 .skills span {
-    background: #1e293b;
-    border: 1px solid #334155;
-    color: #94a3b8;          /* Fixed: was #17355d (invisible on dark bg) */
+    background: #1a0b2a;    /* Dark purple-black background */
+    border: 1px solid #4a1d6d;
+    color: #c79aff;         /* Light purple text */
     padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -236,20 +237,20 @@ footer {
 }
 
 .skills span:hover {
-    border-color: #38bdf8;
-    color: #38bdf8;
+    border-color: #9b4dff;
+    color: #e8d5ff;        /* Very light purple on hover */
 }
 
 .skills span:active {
     transform: scale(0.93);
-    background: #0f2231;
+    background: #2d1542;
 }
 
 /* Selected state toggled by JS */
 .skills span.selected {
-    background: rgba(56, 189, 248, 0.12);
-    border-color: #38bdf8;
-    color: #38bdf8;
+    background: rgba(123, 46, 218, 0.2);  /* Purple tint */
+    border-color: #9b4dff;
+    color: #e8d5ff;
 }
 
 /* =====================
@@ -258,18 +259,18 @@ footer {
 footer {
     text-align: center;
     padding: 24px;
-    background: #020617;
-    color: #64748b;
+    background: #0a0a0a;
+    color: #8c5fc7;       /* Medium purple */
     font-size: 0.85rem;
 }
 
 /* Footer links (if any) */
 footer a {
-    color: #64748b;
+    color: #b77de8;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 footer a:hover {
-    color: #38bdf8;
+    color: #e8d5ff;       /* Very light purple on hover */
 }
