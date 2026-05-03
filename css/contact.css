@@ -1,57 +1,56 @@
-
-  .contact {
+.contact {
     max-width: 600px;
     margin: 60px auto;
     padding: 60px 40px;
-  }
+}
 
-  .contact h2 {
+.contact h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 32px;
-    color: #38bdf8;
+    color: #9b4dff;       /* Bright purple to match style.css */
     letter-spacing: -0.5px;
-  }
+}
 
-  #contactForm {
+#contactForm {
     display: flex;
     flex-direction: column;
     gap: 16px;
-  }
+}
 
-  #contactForm input,
-  #contactForm textarea {
-    background: #1e293b;
-    border: 1px solid #334155;
+#contactForm input,
+#contactForm textarea {
+    background: #1a0b2a;        /* Dark purple-black background */
+    border: 1px solid #4a1d6d;  /* Dark purple border */
     border-radius: 8px;
     padding: 14px 16px;
-    color: white;
+    color: #c79aff;             /* Light purple text */
     font-family: 'Segoe UI', sans-serif;
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     width: 100%;
-  }
+}
 
-  #contactForm input::placeholder,
-  #contactForm textarea::placeholder {
-    color: #64748b;
-  }
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #8c5fc7;             /* Medium purple for placeholder */
+}
 
-  #contactForm input:focus,
-  #contactForm textarea:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-  }
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #9b4dff;      /* Brighter purple on focus */
+    box-shadow: 0 0 0 3px rgba(123, 46, 218, 0.2);  /* Purple glow */
+}
 
-  #contactForm textarea {
+#contactForm textarea {
     resize: vertical;
     min-height: 140px;
-  }
+}
 
-  #contactForm button[type="submit"] {
-    background: #38bdf8;
-    color: #0f172a;
+#contactForm button[type="submit"] {
+    background: #7b2eda;        /* Purple button background */
+    color: #ffffff;             /* White text for contrast */
     border: none;
     padding: 13px 28px;
     border-radius: 6px;
@@ -61,15 +60,15 @@
     align-self: flex-start;
     transition: background 0.2s, transform 0.15s;
     font-family: 'Segoe UI', sans-serif;
-  }
+}
 
-  #contactForm button[type="submit"]:hover {
-    background: #7dd3fc;
+#contactForm button[type="submit"]:hover {
+    background: #9b4dff;        /* Lighter purple on hover */
     transform: translateY(-1px);
-  }
+}
 
-  #formMsg {
+#formMsg {
     margin-top: 16px;
     font-size: 0.9rem;
-    color: #38bdf8;
-  }
+    color: #b77de8;             /* Light purple for messages */
+}
