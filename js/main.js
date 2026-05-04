@@ -52,4 +52,105 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // ─────────────────────────────────────────
+    // 4. SLIDESHOW FUNCTIONALITY
+    // ─────────────────────────────────────────
+    const slides = document.querySelectorAll(".slide");
+    const indicators = document.querySelectorAll(".indicator");
+    const prevBtn = document.querySelector(".slide-btn.prev");
+    const nextBtn = document.querySelector(".slide-btn.next");
+
+    let currentSlide = 0;
+    let autoPlayInterval;
+
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Wrap around if index is out of bounds
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove("active"));
+        indicators.forEach(indicator => indicator.classList.remove("active"));
+
+        // Add active class to current slide and indicator
+        slides[currentSlide].classList.add("active");
+        indicators[currentSlide].classList.add("active");
+    }
+
+    // Function to go to next slide
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    // Function to go to previous slide
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Auto-play functionality
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Event listeners for navigation buttons
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay(); // Restart auto-play after manual navigation
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay(); // Restart auto-play after manual navigation
+        });
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+            showSlide(index);
+            stopAutoPlay();
+            startAutoPlay(); // Restart auto-play after manual navigation
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay();
+        } else if (e.key === "ArrowRight") {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay();
+        }
+    });
+
+    // Pause auto-play on hover
+    const slideshowContainer = document.querySelector(".slideshow-container");
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener("mouseenter", stopAutoPlay);
+        slideshowContainer.addEventListener("mouseleave", startAutoPlay);
+    }
+
+    // Start auto-play when page loads
+    if (slides.length > 0) {
+        startAutoPlay();
+    }
+
 });
