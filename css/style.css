@@ -124,70 +124,121 @@ footer {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 80px 50px;
-    gap: 40px;
+    justify-content: center;
+    padding: 100px 50px 80px;
+    text-align: center;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.2;
     color: #b77de8;
 }
 
 .hero-text p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #8c5fc7;
 }
 
 .hero-text .btn {
-    align-self: flex-start;
     margin-top: 8px;
-}
-
-/* Profile image with hover zoom */
-.hero-img img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #7b2eda;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.hero-img img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 24px rgba(123, 46, 218, 0.45);
 }
 
 /* =====================
    ABOUT
    ===================== */
 .about {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 60px auto;
     padding: 0 40px;
-    text-align: center;
 }
 
 .about h2 {
     font-size: 1.8rem;
     color: #9b4dff;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.about p {
+/* About Container with Image and Content */
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* About Image */
+.about-img {
+    flex-shrink: 0;
+}
+
+.about-img img {
+    width: 280px;
+    height: 280px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid #7b2eda;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 32px rgba(123, 46, 218, 0.4);
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-content p {
     color: #bca3e6;
     line-height: 1.8;
     font-size: 1rem;
+    text-align: left;
+}
+
+/* About Details Container for Additional Content */
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-details h3 {
+    color: #9b4dff;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.about-details p,
+.about-details ul {
+    color: #bca3e6;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.about-details ul {
+    padding-left: 20px;
+}
+
+.about-details li {
+    margin-bottom: 8px;
+}
+
+.about-details li::marker {
+    color: #7b2eda;
 }
 
 /* =====================
