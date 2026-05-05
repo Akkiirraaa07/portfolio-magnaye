@@ -7,6 +7,199 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* =====================
+           LIGHT MODE STYLES (Cream White)
+           ===================== */
+        body.light-mode {
+            background: #FFFBF5;
+            color: #3d1a5c;
+        }
+
+        body.light-mode .navbar {
+            background: #FFF8ED;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        body.light-mode .logo {
+            color: #9b4dff;
+        }
+
+        body.light-mode .nav-links a {
+            color: #5e2a8c;
+        }
+
+        body.light-mode .nav-links a:hover {
+            color: #9b4dff;
+        }
+
+        body.light-mode .hero-text h1 {
+            color: #9b4dff;
+        }
+
+        body.light-mode .hero-text p {
+            color: #7a4faf;
+        }
+
+        body.light-mode .about h2 {
+            color: #3d1a5c;
+        }
+
+        body.light-mode .about-content p {
+            color: #4a2a6a;
+        }
+
+        body.light-mode .skills-technologies h2 {
+            color: #3d1a5c;
+        }
+
+        body.light-mode .skill-card {
+            background: #FFFFFF;
+            border: 1px solid #E8DDD0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        body.light-mode .skill-card h3 {
+            color: #8c6bb3;
+        }
+
+        body.light-mode .skill-tag {
+            border: 1px solid #c9b3e6;
+            color: #7b2eda;
+        }
+
+        body.light-mode .skill-tag:hover {
+            background: rgba(123, 46, 218, 0.08);
+            border-color: #9b4dff;
+        }
+
+        body.light-mode .timeline::before {
+            background: #DDD0C0;
+        }
+
+        body.light-mode .timeline-year {
+            background: #9b4dff;
+            box-shadow: 0 0 0 4px #FFFBF5;
+        }
+
+        body.light-mode .timeline-content {
+            background: #FFFFFF;
+            border: 1px solid #E8DDD0;
+        }
+
+        body.light-mode .timeline-content h3 {
+            color: #7b2eda;
+        }
+
+        body.light-mode .timeline-content .company {
+            color: #9b4dff;
+        }
+
+        body.light-mode .timeline-content .location {
+            color: #8c6bb3;
+        }
+
+        body.light-mode .timeline-content .date {
+            color: #a88bcc;
+        }
+
+        body.light-mode .experience-list li {
+            color: #5e3a7a;
+        }
+
+        body.light-mode .section-divider span {
+            background: #FFFBF5;
+            color: #9b4dff;
+        }
+
+        body.light-mode .section-divider::before {
+            background: linear-gradient(to right, transparent, #DDD0C0 20%, #DDD0C0 80%, transparent);
+        }
+
+        body.light-mode footer {
+            background: #FFF8ED;
+            color: #8c6bb3;
+        }
+
+        body.light-mode .indicator {
+            background: rgba(123, 46, 218, 0.2);
+            border-color: #9b4dff;
+        }
+
+        body.light-mode .indicator.active {
+            background: #9b4dff;
+        }
+
+        body.light-mode .deco-circle {
+            border-color: #c9b3e6;
+        }
+
+        body.light-mode .deco-plus::before,
+        body.light-mode .deco-plus::after {
+            background: #c9b3e6;
+        }
+
+        body.light-mode .slide-btn {
+            background: rgba(155, 77, 255, 0.15);
+            border-color: #9b4dff;
+        }
+
+        /* Theme Toggle Button Styles */
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #7b2eda;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: #9b4dff;
+            box-shadow: 0 6px 20px rgba(123, 46, 218, 0.4);
+        }
+
+        .theme-toggle svg {
+            width: 28px;
+            height: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover svg {
+            transform: rotate(15deg);
+        }
+
+        body.light-mode .theme-toggle {
+            background: #9b4dff;
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .theme-toggle svg {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Smooth transition for theme switching */
+        body,
+        .navbar,
+        .skill-card,
+        .timeline-content,
+        .about-content p,
+        footer,
+        .indicator,
+        .slide-btn {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
 </head>
 <body>
 
@@ -277,7 +470,62 @@
     <p>© 2026 Sheera Mae Magnaye</p>
 </footer>
 
-<script src="js/main.js"></script>
+<!-- Theme Toggle Button -->
+<div class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Mode">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px">
+        <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/>
+        <path d="M12 7v10c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+    </svg>
+</div>
 
+<script src="js/main.js"></script>
+<script>
+    // Light/Dark Mode Toggle Functionality (Separate Implementation)
+    (function() {
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const body = document.body;
+        
+        // Apply saved theme or default to dark mode
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+        } else if (savedTheme === 'dark') {
+            body.classList.remove('light-mode');
+        } else {
+            // Default to dark mode (original)
+            body.classList.remove('light-mode');
+            localStorage.setItem('portfolio-theme', 'dark');
+        }
+        
+        // Get toggle button
+        const toggleBtn = document.getElementById('themeToggle');
+        
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                if (body.classList.contains('light-mode')) {
+                    // Switch to dark mode
+                    body.classList.remove('light-mode');
+                    localStorage.setItem('portfolio-theme', 'dark');
+                    
+                    // Optional: change icon to moon for dark mode
+                    const svg = toggleBtn.querySelector('svg');
+                    if (svg) {
+                        svg.innerHTML = '<path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/><path d="M12 7v10c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>';
+                    }
+                } else {
+                    // Switch to light mode (cream white)
+                    body.classList.add('light-mode');
+                    localStorage.setItem('portfolio-theme', 'light');
+                    
+                    // Optional: change icon to sun for light mode
+                    const svg = toggleBtn.querySelector('svg');
+                    if (svg) {
+                        svg.innerHTML = '<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>';
+                    }
+                }
+            });
+        }
+    })();
+</script>
 </body>
 </html>
