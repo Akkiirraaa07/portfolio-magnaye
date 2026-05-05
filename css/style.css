@@ -302,6 +302,82 @@ footer {
     background: #b77de8;
 }
 
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+/* Facebook */
+.social-icon.facebook {
+    background: rgba(24, 119, 242, 0.1);
+    border: 2px solid rgba(24, 119, 242, 0.3);
+    color: #1877F2;
+}
+
+.social-icon.facebook:hover {
+    background: #1877F2;
+    border-color: #1877F2;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.4);
+    transform: translateY(-4px);
+}
+
+/* LinkedIn */
+.social-icon.linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    border: 2px solid rgba(10, 102, 194, 0.3);
+    color: #0A66C2;
+}
+
+.social-icon.linkedin:hover {
+    background: #0A66C2;
+    border-color: #0A66C2;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+    transform: translateY(-4px);
+}
+
+/* Instagram */
+.social-icon.instagram {
+    background: rgba(225, 48, 108, 0.1);
+    border: 2px solid rgba(225, 48, 108, 0.3);
+    color: #E1306C;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    border-color: #E1306C;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.4);
+    transform: translateY(-4px);
+}
+
 /* =====================
    SKILLS (Simple Tags)
    ===================== */

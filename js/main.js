@@ -153,4 +153,17 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoPlay();
     }
 
+    // ─────────────────────────────────────────
+    // 5. SOCIAL MEDIA ICON ANIMATIONS
+    // ─────────────────────────────────────────
+    document.querySelectorAll(".social-icon").forEach(icon => {
+        icon.addEventListener("mouseenter", function() {
+            this.style.transform = "translateY(-4px) rotate(5deg)";
+        });
+        
+        icon.addEventListener("mouseleave", function() {
+            this.style.transform = "translateY(0) rotate(0deg)";
+        });
+    });
+
 });
