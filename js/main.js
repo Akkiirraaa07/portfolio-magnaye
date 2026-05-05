@@ -166,4 +166,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+     // Light/Dark Mode Toggle Functionality (Separate Implementation)
+    (function() {
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const body = document.body;
+        
+        // Apply saved theme or default to dark mode
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+        } else if (savedTheme === 'dark') {
+            body.classList.remove('light-mode');
+        } else {
+            // Default to dark mode (original)
+            body.classList.remove('light-mode');
+            localStorage.setItem('portfolio-theme', 'dark');
+        }
+        
+        // Get toggle button
+        const toggleBtn = document.getElementById('themeToggle');
+        
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                if (body.classList.contains('light-mode')) {
+                    // Switch to dark mode
+                    body.classList.remove('light-mode');
+                    localStorage.setItem('portfolio-theme', 'dark');
+                    
+                    // Optional: change icon to moon for dark mode
+                    const svg = toggleBtn.querySelector('svg');
+                    if (svg) {
+                        svg.innerHTML = '<path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/><path d="M12 7v10c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>';
+                    }
+                } else {
+                    // Switch to light mode (cream white)
+                    body.classList.add('light-mode');
+                    localStorage.setItem('portfolio-theme', 'light');
+                    
+                    // Optional: change icon to sun for light mode
+                    const svg = toggleBtn.querySelector('svg');
+                    if (svg) {
+                        svg.innerHTML = '<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>';
+                    }
+                }
+            });
+        }
+    })();
+
 });
