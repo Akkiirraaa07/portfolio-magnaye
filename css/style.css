@@ -11,7 +11,6 @@ body {
     position: relative;
 }
 
-/* All content must sit above the background */
 .navbar,
 .hero,
 .about,
@@ -43,7 +42,6 @@ footer {
     gap: 20px;
 }
 
-/* Nav link with sliding underline effect */
 .nav-links a {
     color: #b77de8;
     text-decoration: none;
@@ -101,7 +99,6 @@ footer {
     transform: scale(0.96) translateY(0);
 }
 
-/* Ripple span injected by JS */
 .btn .ripple {
     position: absolute;
     border-radius: 50%;
@@ -169,14 +166,12 @@ footer {
     font-weight: 700;
 }
 
-/* About Container with Content and Image */
 .about-container {
     display: flex;
     gap: 80px;
     align-items: center;
 }
 
-/* About Content */
 .about-content {
     flex: 1;
     display: flex;
@@ -191,26 +186,39 @@ footer {
     text-align: left;
 }
 
-/* About Image Wrapper with Decorative Elements */
+/* About Image Wrapper */
 .about-img-wrapper {
     position: relative;
     flex-shrink: 0;
 }
 
-/* About Image */
+/* About Image — circle frame */
 .about-img {
     position: relative;
     z-index: 2;
 }
 
-.about-img img {
+.about-img a {
+    display: block;
     width: 300px;
     height: 300px;
-    border-radius: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #7b2eda;
+    box-shadow: 0 0 24px rgba(123, 46, 218, 0.45);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about-img a:hover {
+    box-shadow: 0 0 40px rgba(155, 77, 255, 0.65);
+    transform: scale(1.03);
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
-    /* Pixelated cat effect - adjust filter if needed */
-    image-rendering: pixelated;
 }
 
 /* Decorative Circles */
@@ -333,7 +341,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Facebook */
 .social-icon.facebook {
     background: rgba(24, 119, 242, 0.1);
     border: 2px solid rgba(24, 119, 242, 0.3);
@@ -348,7 +355,6 @@ footer {
     transform: translateY(-4px);
 }
 
-/* LinkedIn */
 .social-icon.linkedin {
     background: rgba(10, 102, 194, 0.1);
     border: 2px solid rgba(10, 102, 194, 0.3);
@@ -363,7 +369,6 @@ footer {
     transform: translateY(-4px);
 }
 
-/* Instagram */
 .social-icon.instagram {
     background: rgba(225, 48, 108, 0.1);
     border: 2px solid rgba(225, 48, 108, 0.3);
@@ -401,7 +406,6 @@ footer {
     gap: 10px;
 }
 
-/* Skill tags */
 .skills span {
     background: #1a0b2a;
     border: 1px solid #4a1d6d;
@@ -424,7 +428,6 @@ footer {
     background: #2d1542;
 }
 
-/* Selected state toggled by JS */
 .skills span.selected {
     background: rgba(123, 46, 218, 0.2);
     border-color: #9b4dff;
@@ -447,20 +450,17 @@ footer {
     text-align: left;
 }
 
-/* Slideshow Container */
 .slideshow-container {
     position: relative;
     overflow: hidden;
 }
 
-/* Slideshow Wrapper */
 .skills-slideshow {
     position: relative;
     width: 100%;
     min-height: 400px;
 }
 
-/* Individual Slide */
 .slide {
     position: absolute;
     top: 0;
@@ -477,14 +477,12 @@ footer {
     position: relative;
 }
 
-/* Skills Grid inside slide */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
 }
 
-/* Individual skill card */
 .skill-card {
     background: #0f0f0f;
     border: 1px solid #1a1a1a;
@@ -508,14 +506,12 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Tag container inside card */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-/* Individual skill tag */
 .skill-tag {
     background: transparent;
     border: 1px solid #6b3fa0;
@@ -533,7 +529,6 @@ footer {
     color: #c79aff;
 }
 
-/* Navigation Buttons */
 .slide-btn {
     position: absolute;
     top: 50%;
@@ -567,7 +562,6 @@ footer {
     right: -60px;
 }
 
-/* Slide Indicators */
 .slide-indicators {
     display: flex;
     justify-content: center;
@@ -611,13 +605,11 @@ footer {
     text-align: left;
 }
 
-/* Timeline Container */
 .timeline {
     position: relative;
     padding-left: 80px;
 }
 
-/* Vertical Line */
 .timeline::before {
     content: '';
     position: absolute;
@@ -628,7 +620,6 @@ footer {
     background: #2a2a2a;
 }
 
-/* Timeline Item */
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
@@ -637,7 +628,6 @@ footer {
     align-items: flex-start;
 }
 
-/* Year Badge */
 .timeline-year {
     position: absolute;
     left: -80px;
@@ -655,7 +645,6 @@ footer {
     box-shadow: 0 0 0 4px #000000;
 }
 
-/* Timeline Content Card */
 .timeline-content {
     background: #0f0f0f;
     border: 1px solid #1a1a1a;
@@ -697,7 +686,6 @@ footer {
     margin-bottom: 12px;
 }
 
-/* Experience List */
 .experience-list {
     margin-top: 12px;
     padding-left: 20px;
@@ -714,7 +702,6 @@ footer {
     color: #7b2eda;
 }
 
-/* Section Divider */
 .section-divider {
     position: relative;
     margin: 50px 0;
@@ -754,7 +741,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* Footer links (if any) */
 footer a {
     color: #b77de8;
     text-decoration: none;
